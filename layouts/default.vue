@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-cont">
     <nav
       class="navbar header has-shadow is-info"
       role="navigation"
@@ -20,6 +20,7 @@
         <Nuxt />
       </div>
     </section>
+    <app-footer />
   </div>
 </template>
 
@@ -39,3 +40,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .main-cont {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+</style>
