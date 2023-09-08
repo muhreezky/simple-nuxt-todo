@@ -1,5 +1,5 @@
 <template>
-	<footer class="footer has-background-link has-text-white">
+	<footer class="footer has-background-info has-text-white">
 		<div class="content is-flex is-justify-content-space-between is-align-items-center">
 			<div>
 				&copy; 2023 MuhReezky
