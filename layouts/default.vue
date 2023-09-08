@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="navbar header has-shadow is-primary"
+      class="navbar header has-shadow is-info"
       role="navigation"
       aria-label="main navigation"
     >
@@ -12,12 +12,6 @@
         >
           WhatShouldIDo
         </nuxt-link>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
       </div>
     </nav>
 
@@ -40,11 +34,6 @@ export default {
           icon: 'home',
           to: { name: 'index' }
         },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
       ]
     }
   }

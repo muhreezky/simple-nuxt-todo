@@ -1,15 +1,16 @@
 export const state = () => ({
-	todos: []
+	todos: [],
 });
 
 export const mutations = {
 	add(state, text) {
-		state.todos.push({ text, selesai: false });
+		const id = state.todos.length;
+		state.todos.push({ text, selesai: false, id });
 	},
-	remove(state, { todo }) {
+	remove(state, todo) {
 		state.todos.splice(state.todos.indexOf(todo), 1);
 	},
-	toggle(state, { todo }) {
-		todo.done = !todo.done;
+	toggle(state, todo) {
+		todo.selesai = !todo.selesai;
 	}
 }

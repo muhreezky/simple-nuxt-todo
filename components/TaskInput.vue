@@ -1,19 +1,17 @@
 <template>
-	<div class="container">
+	<div class="block container">
 		<div class="columns">
-			{{ text }}
 			<div class="column">
 				<b-field label="Task Anda" horizontal required>
-					<b-input v-model="text" placeholder="Tulis tugas anda di sini" @keyup.enter="addTodo" />
+					<input v-model="text" class="input" required placeholder="Tulis tugas anda di sini" @keyup.enter="addTodo" />
 				</b-field>
 			</div>
 			<div class="column">
-				<b-button expanded icon-left="plus" type="is-primary" @click="addTodo">
+				<b-button expanded icon-left="plus" type="is-info" @click="addTodo">
 					Tambahkan
 				</b-button>
 			</div>
 		</div>
-		{{ todos }}
 	</div>
 </template>
 
@@ -32,8 +30,10 @@
 		},
 		methods: {
 			addTodo() {
-				this.$store.commit('add', this.text);
-				this.text = '';
+				if (this.text) {
+					this.$store.commit('add', this.text);
+					this.text = '';
+				}
 			}
 		},
 	}
