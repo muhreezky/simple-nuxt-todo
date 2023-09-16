@@ -1,17 +1,17 @@
 <template>
 	<div class="block container">
-		<div class="columns">
+		<form class="columns" @submit.prevent="addTodo">
 			<div class="column">
 				<b-field label="Task Anda" horizontal required>
-					<input v-model="text" class="input" required placeholder="Tulis tugas anda di sini" @keyup.enter="addTodo" />
+					<input v-model="text" class="input" required placeholder="Tulis tugas anda di sini" />
 				</b-field>
 			</div>
 			<div class="column">
-				<b-button expanded icon-left="plus" type="is-info" @click="addTodo">
+				<button class="button is-info" style="width: 100% !important;" type="submit">
 					Tambahkan
-				</b-button>
+				</button>
 			</div>
-		</div>
+		</form>
 	</div>
 </template>
 
